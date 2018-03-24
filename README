@@ -1,0 +1,27 @@
+***** 该项目包含三个模块， 自定义框架/优秀项目/技术学习  ******
+
+** framework **
+包含模块如下：
+    core
+    utils
+    web
+    cache
+    db
+    mq
+    rpc
+    plugins
+
+** study **
+包含学习的内容
+    designpattern
+    springboot
+    springcloud
+
+** projects **
+包含项目
+    tomcat
+    rocketmq
+
+
+
+
