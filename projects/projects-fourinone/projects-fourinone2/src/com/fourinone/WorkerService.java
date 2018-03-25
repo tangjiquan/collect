@@ -1,6 +1,5 @@
 package com.fourinone;
 
-import java.io.Serializable;
 import java.rmi.RemoteException;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

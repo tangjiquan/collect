@@ -1,20 +1,18 @@
 package com.fourinone;
 
-import java.io.*;
+import org.xml.sax.InputSource;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import java.io.FileInputStream;
 import java.util.ArrayList;
-import javax.xml.parsers.*;
-import org.xml.sax.*;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
-import org.w3c.dom.*;
+
 //import com.file.*;
 //import com.base.*;
 //import com.log.LogUtil;
 //import javax.servlet.*;
 //import javax.servlet.http.*;
 //import com.lang.MulLangBean;
-import java.util.List;
 
 public class XmlUtil
 {

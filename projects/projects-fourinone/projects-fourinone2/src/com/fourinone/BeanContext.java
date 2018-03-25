@@ -1,9 +1,8 @@
 package com.fourinone;
 
-import java.rmi.RemoteException;
-import java.rmi.Remote;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.rmi.RemoteException;
 import java.util.Map;
 
 public class BeanContext extends ServiceContext

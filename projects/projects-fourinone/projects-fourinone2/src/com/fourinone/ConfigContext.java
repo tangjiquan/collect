@@ -11,7 +11,8 @@ public class ConfigContext
 	private static MulBean mb = null;
 	private static String QSXYSJ=null,YMMZ=null,RZDY=null,YCDYXY=null,DMY=null,AQCL=null,POLICY=null,LSML=null,SERVICEONWORKER=null;
 	private static long TMOT=-1;
-	static String configFile = "config.xml";
+	//static String configFile = "config.xml";
+	static String configFile = "/home/tangjiquan/Study/projects/panther/source/collect/projects/projects-fourinone/projects-fourinone2/mytest/config.xml";
 	private static ObjValue USERS = null;
 	
 	static MulBean getMulBean(){

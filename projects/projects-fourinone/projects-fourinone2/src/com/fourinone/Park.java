@@ -1,8 +1,6 @@
 package com.fourinone;
 
-import java.util.List;
 import java.rmi.RemoteException;
-import java.io.Serializable;
 
 public interface Park extends ParkActive
 {
