@@ -8,21 +8,37 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>framework</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>framework</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>framework-core</module>
+        <module>framework-cache</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+    <mailingLists>
+        <mailingList>
+            <name>Development List</name>
+            <subscribe>249552742@qq.com</subscribe>
+        </mailingList>
+    </mailingLists>
+
+    <developers>
+        <developer>
+            <name>kevin</name>
+            <email>249552742@qq.com</email>
+            <roles>developer</roles>
+        </developer>
+    </developers>
+
+
+
 </project>
