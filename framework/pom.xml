@@ -15,6 +15,7 @@
     <modules>
         <module>framework-core</module>
         <module>framework-cache</module>
+        <module>framework-mq</module>
     </modules>
 
     <properties>

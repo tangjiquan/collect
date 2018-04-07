@@ -15,6 +15,8 @@
     <modules>
         <module>projects-fourinone</module>
         <module>projects-rocketmq</module>
+        <module>projects-commons-cli</module>
+        <module>projects-zbus</module>
     </modules>
 
     <properties>

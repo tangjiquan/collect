@@ -13,12 +13,12 @@ public class ParkGroup{
 	private void initGroups()
 	{
 		ObjValue group1 = new ObjValue();
-		Long t1 = new Long(ConfigContext.getDateLong("2010-01-01"));
+		Long t1 = new Long(ConfigContext.getDateLong("2010-example01-example01"));
 		group1.setObj("localhost:1888,localhost:1889",t1);
 		group1.setObj("localhost:2000,localhost:2001",t1);
-		Long t2 = new Long(ConfigContext.getDateLong("2010-05-01"));//2012
+		Long t2 = new Long(ConfigContext.getDateLong("2010-05-example01"));//2012
 		group1.setObj("localhost:2002,localhost:2003",t2);
-		Long t3 = new Long(ConfigContext.getDateLong("2012-05-01"));//2012
+		Long t3 = new Long(ConfigContext.getDateLong("2012-05-example01"));//2012
 		group1.setObj("localhost:2004,localhost:2005",t3);
 		group1.setObj("localhost:2006,localhost:2007",t3);
 		/*group1.setObj("localhost:2008,localhost:2009",t2);
@@ -29,7 +29,7 @@ public class ParkGroup{
 		groups.put(group1, t1);
 		/*
 		ObjValue group2 = new ObjValue();
-		Long t3 = new Long(getDateLong("2010-08-01"));
+		Long t3 = new Long(getDateLong("2010-08-example01"));
 		group2.setObj("localhost:2000,localhost:2001",t3);
 		group2.setObj("localhost:2002,localhost:2003",t3);
 		group2.setObj("localhost:2004,localhost:2005",t3);

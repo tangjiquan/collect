@@ -259,7 +259,7 @@ public interface MessageStore {
     /**
      * Return the current timestamp of the store.
      *
-     * @return current time in milliseconds since 1970-01-01.
+     * @return current time in milliseconds since 1970-example01-example01.
      */
     long now();
 

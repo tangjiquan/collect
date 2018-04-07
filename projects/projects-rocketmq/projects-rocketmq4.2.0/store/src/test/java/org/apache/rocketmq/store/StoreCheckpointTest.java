@@ -16,7 +16,7 @@
  */
 
 /**
- * $Id: StoreCheckpointTest.java 1831 2013-05-16 01:39:51Z vintagewang@apache.org $
+ * $Id: StoreCheckpointTest.java 1831 2013-05-16 example01:39:51Z vintagewang@apache.org $
  */
 package org.apache.rocketmq.store;
 
