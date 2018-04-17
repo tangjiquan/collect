@@ -1,11 +1,7 @@
 /**
 *This is not a class, just a sample of some jcl source code to convert
 */
-import org.apache.commons.logging.LogFactory;
-import org.apache.commons.logging.Log;
-
-
-Log l = LogFactory.getLog(MyClass.class);
+Log l=LogFactory.getLog(MyClass.class);
 Log mylog=LogFactory.getLog(MyClass.class);
 Log mylog1 = LogFactory.getLog(MyClass.class);
 Log mylog2  =    LogFactory.getLog(MyClass.class);
