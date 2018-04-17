@@ -149,10 +149,11 @@
                 <version>1.4.1</version>
                 <executions>
                     <execution>
-                        <id>enforce-ban-circular-dependencies</id>
+                        <id>enforce-ban-circular-dependencies</id> <!-- 一个执行实例的ID -->
                         <goals>
-                            <goal>enforce</goal>
+                            <goal>enforce</goal><!-- 执行的命令 -->
                         </goals>
+                        <phase>validate</phase><!-- 在validate阶段进行校验 -->
                     </execution>
                 </executions>
                 <configuration>

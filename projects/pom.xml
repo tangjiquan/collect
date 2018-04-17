@@ -17,7 +17,8 @@
         <module>projects-rocketmq</module>
         <module>projects-commons-cli</module>
         <module>projects-zbus</module>
-    </modules>
+		<module>projects-slf4j</module>
+	</modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
