@@ -18,6 +18,9 @@
         <module>projects-commons-cli</module>
         <module>projects-zbus</module>
 		<module>projects-slf4j</module>
+		<module>projects-h2</module>
+        <module>projects-tomcat</module>
+		<module>projects-HikariCP</module>
 	</modules>
 
     <properties>
