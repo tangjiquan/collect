@@ -21,6 +21,8 @@
 		<module>projects-h2</module>
         <module>projects-tomcat</module>
 		<module>projects-HikariCP</module>
+		<module>projects-ownweb</module>
+		<module>projects-spring</module>
 	</modules>
 
     <properties>

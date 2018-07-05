@@ -5,12 +5,6 @@
  */
 package org.h2.jdbc;
 
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.RowIdLifetime;
-import java.sql.SQLException;
 import org.h2.engine.Constants;
 import org.h2.engine.SysProperties;
 import org.h2.message.DbException;
@@ -19,6 +13,8 @@ import org.h2.message.TraceObject;
 import org.h2.tools.SimpleResultSet;
 import org.h2.util.StatementBuilder;
 import org.h2.util.StringUtils;
+
+import java.sql.*;
 
 /**
  * Represents the meta data for a database.
@@ -3106,6 +3102,16 @@ public class JdbcDatabaseMetaData extends TraceObject implements
             String functionNamePattern, String columnNamePattern)
             throws SQLException {
         throw unsupported("getFunctionColumns");
+    }
+
+    @Override
+    public ResultSet getPseudoColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean generatedKeyAlwaysReturned() throws SQLException {
+        return false;
     }
 
     /**

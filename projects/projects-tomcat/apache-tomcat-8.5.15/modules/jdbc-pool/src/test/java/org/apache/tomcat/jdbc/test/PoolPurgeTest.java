@@ -16,13 +16,12 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.sql.Connection;
-
+import org.apache.tomcat.jdbc.test.driver.Driver;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.apache.tomcat.jdbc.test.driver.Driver;
+import java.sql.Connection;
 
 public class PoolPurgeTest extends DefaultTestCase {
 

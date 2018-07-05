@@ -19,17 +19,16 @@
  */
 package org.h2.jdbcx;
 
+import org.h2.message.DbException;
+import org.h2.util.New;
+
+import javax.sql.*;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.ArrayList;
-import javax.sql.ConnectionEvent;
-import javax.sql.ConnectionEventListener;
-import javax.sql.ConnectionPoolDataSource;
-import javax.sql.DataSource;
-import javax.sql.PooledConnection;
-import org.h2.util.New;
-import org.h2.message.DbException;
+import java.util.logging.Logger;
 
 /*## Java 1.7 ##
 import java.util.logging.Logger;
@@ -145,6 +144,11 @@ public class JdbcConnectionPool implements DataSource, ConnectionEventListener {
     @Override
     public synchronized int getLoginTimeout() {
         return timeout;
+    }
+
+    @Override
+    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+        return null;
     }
 
     /**

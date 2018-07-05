@@ -16,11 +16,10 @@
  */
 package org.apache.tomcat.jdbc.pool;
 
+import javax.sql.XAConnection;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.sql.SQLException;
-
-import javax.sql.XAConnection;
 /**
  * A ProxyConnection object is the bottom most interceptor that wraps an object of type
  * {@link PooledConnection}. The ProxyConnection intercepts three methods:

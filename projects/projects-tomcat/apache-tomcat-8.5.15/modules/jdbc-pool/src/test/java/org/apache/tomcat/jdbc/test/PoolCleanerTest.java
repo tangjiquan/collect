@@ -16,13 +16,12 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.util.Map;
-
+import org.apache.tomcat.jdbc.pool.ConnectionPool;
+import org.apache.tomcat.jdbc.pool.DataSource;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.apache.tomcat.jdbc.pool.ConnectionPool;
-import org.apache.tomcat.jdbc.pool.DataSource;
+import java.util.Map;
 
 public class PoolCleanerTest extends DefaultTestCase {
 

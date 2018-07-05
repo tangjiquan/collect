@@ -16,17 +16,12 @@
  */
 package org.apache.tomcat.jdbc.pool;
 
-import java.lang.management.ManagementFactory;
-import java.util.Hashtable;
-
-import javax.management.InstanceNotFoundException;
-import javax.management.MBeanRegistration;
-import javax.management.MBeanServer;
-import javax.management.MalformedObjectNameException;
-import javax.management.ObjectName;
-
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
+
+import javax.management.*;
+import java.lang.management.ManagementFactory;
+import java.util.Hashtable;
 
 
 /**

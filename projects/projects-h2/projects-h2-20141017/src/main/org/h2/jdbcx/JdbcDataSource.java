@@ -5,25 +5,24 @@
  */
 package org.h2.jdbcx;
 
+import org.h2.Driver;
+import org.h2.jdbc.JdbcConnection;
+import org.h2.message.TraceObject;
+import org.h2.util.StringUtils;
+
+import javax.naming.Reference;
+import javax.naming.Referenceable;
+import javax.naming.StringRefAddr;
+import javax.sql.*;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.PrintWriter;
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
-import javax.naming.Reference;
-import javax.naming.Referenceable;
-import javax.naming.StringRefAddr;
-import javax.sql.ConnectionPoolDataSource;
-import javax.sql.DataSource;
-import javax.sql.PooledConnection;
-import javax.sql.XAConnection;
-import javax.sql.XADataSource;
-import org.h2.Driver;
-import org.h2.jdbc.JdbcConnection;
-import org.h2.message.TraceObject;
-import org.h2.util.StringUtils;
+import java.util.logging.Logger;
 
 /*## Java 1.7 ##
 import java.util.logging.Logger;
@@ -112,6 +111,11 @@ public class JdbcDataSource extends TraceObject implements XADataSource,
     public int getLoginTimeout() {
         debugCodeCall("getLoginTimeout");
         return loginTimeout;
+    }
+
+    @Override
+    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+        return null;
     }
 
     /**

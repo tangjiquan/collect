@@ -5,16 +5,16 @@
  */
 package org.h2.build.doc;
 
+import org.h2.build.BuildBase;
+import org.h2.util.StringUtils;
+import org.h2.util.Utils;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
-
-import org.h2.build.BuildBase;
-import org.h2.util.StringUtils;
-import org.h2.util.Utils;
 
 /**
  * The spell checker makes sure that each word used in the source code

@@ -16,14 +16,13 @@
  */
 package websocket.echo;
 
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.Writer;
-
 import javax.websocket.OnMessage;
 import javax.websocket.PongMessage;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.Writer;
 
 /**
  * The three annotated echo endpoints can be used to test with Autobahn and

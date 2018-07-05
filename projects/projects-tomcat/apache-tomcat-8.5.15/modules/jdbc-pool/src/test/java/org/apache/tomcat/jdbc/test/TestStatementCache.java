@@ -16,17 +16,16 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.lang.reflect.Proxy;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-
+import org.apache.tomcat.jdbc.pool.JdbcInterceptor;
+import org.apache.tomcat.jdbc.pool.interceptor.StatementCache;
+import org.apache.tomcat.jdbc.pool.interceptor.StatementCounterInterceptor;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.apache.tomcat.jdbc.pool.JdbcInterceptor;
-import org.apache.tomcat.jdbc.pool.interceptor.StatementCache;
-import org.apache.tomcat.jdbc.pool.interceptor.StatementCounterInterceptor;
+import java.lang.reflect.Proxy;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 public class TestStatementCache extends DefaultTestCase {
 

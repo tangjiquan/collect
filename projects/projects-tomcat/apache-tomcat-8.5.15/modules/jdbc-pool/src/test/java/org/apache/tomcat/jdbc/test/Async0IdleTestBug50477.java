@@ -16,13 +16,12 @@
  */
 package org.apache.tomcat.jdbc.test;
 
+import org.apache.tomcat.jdbc.pool.DataSourceProxy;
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.Test;
-
-import org.apache.tomcat.jdbc.pool.DataSourceProxy;
 
 public class Async0IdleTestBug50477 extends DefaultTestCase {
 

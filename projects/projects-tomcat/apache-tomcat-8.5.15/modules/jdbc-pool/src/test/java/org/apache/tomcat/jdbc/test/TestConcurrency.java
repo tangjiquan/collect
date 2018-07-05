@@ -16,16 +16,15 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.sql.Connection;
-import java.util.concurrent.atomic.AtomicInteger;
-
+import org.apache.tomcat.jdbc.pool.DataSource;
+import org.apache.tomcat.jdbc.test.driver.Driver;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.apache.tomcat.jdbc.pool.DataSource;
-import org.apache.tomcat.jdbc.test.driver.Driver;
+import java.sql.Connection;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestConcurrency extends DefaultTestCase {
 

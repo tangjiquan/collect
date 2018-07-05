@@ -16,13 +16,13 @@
  */
 package org.apache.tomcat.jdbc.pool.interceptor;
 
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
-
 import org.apache.tomcat.jdbc.pool.ConnectionPool;
 import org.apache.tomcat.jdbc.pool.JdbcInterceptor;
 import org.apache.tomcat.jdbc.pool.PoolProperties.InterceptorProperty;
 import org.apache.tomcat.jdbc.pool.PooledConnection;
+
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class TestInterceptor extends JdbcInterceptor {
     public static boolean poolstarted = false;

@@ -5,15 +5,14 @@
  */
 package org.h2;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.DriverPropertyInfo;
-import java.sql.SQLException;
-import java.util.Properties;
 import org.h2.engine.Constants;
 import org.h2.jdbc.JdbcConnection;
 import org.h2.message.DbException;
 import org.h2.upgrade.DbUpgrade;
+
+import java.sql.*;
+import java.util.Properties;
+import java.util.logging.Logger;
 
 /*## Java 1.7 ##
 import java.util.logging.Logger;
@@ -138,6 +137,11 @@ public class Driver implements java.sql.Driver {
     @Override
     public boolean jdbcCompliant() {
         return true;
+    }
+
+    @Override
+    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+        return null;
     }
 
     /**

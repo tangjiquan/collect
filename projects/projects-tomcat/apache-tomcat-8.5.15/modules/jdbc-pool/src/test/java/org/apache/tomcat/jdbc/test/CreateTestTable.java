@@ -16,15 +16,14 @@
  */
 package org.apache.tomcat.jdbc.test;
 
+import org.apache.tomcat.jdbc.pool.interceptor.ResetAbandonedTimer;
+import org.junit.Test;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Random;
-
-import org.junit.Test;
-
-import org.apache.tomcat.jdbc.pool.interceptor.ResetAbandonedTimer;
 
 public class CreateTestTable extends DefaultTestCase {
 

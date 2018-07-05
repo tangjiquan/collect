@@ -16,15 +16,14 @@
  */
 package org.apache.tomcat.jdbc.bugs;
 
-import java.sql.SQLException;
-
-import static org.junit.Assert.fail;
-
-import org.junit.Test;
-
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
 import org.apache.tomcat.jdbc.test.DefaultProperties;
+import org.junit.Test;
+
+import java.sql.SQLException;
+
+import static org.junit.Assert.fail;
 
 public class Bug54978 {
 

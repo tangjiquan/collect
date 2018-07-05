@@ -16,6 +16,11 @@
  */
 package org.apache.tomcat.jdbc.pool;
 
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+import org.apache.tomcat.jdbc.pool.PoolProperties.InterceptorDefinition;
+
+import javax.sql.XAConnection;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -24,12 +29,6 @@ import java.util.Iterator;
 import java.util.Properties;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
-
-import javax.sql.XAConnection;
-
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
-import org.apache.tomcat.jdbc.pool.PoolProperties.InterceptorDefinition;
 
 /**
  *

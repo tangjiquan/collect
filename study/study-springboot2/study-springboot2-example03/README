@@ -1,0 +1,8 @@
+1. springboot配置
+2. 使用logback
+3. 使用springmvc controller指向html
+4. 使用application.yml
+5. application.properties的优先级大于application.yml
+6. 根据不同的环境配置不同的yml配置文件
+7. 根据不同环境配置logback的配置文件
+8. 加载自定的配置文件config.properties, 在controller中使用value引用， 使用ConfigurationProperties进行扫描

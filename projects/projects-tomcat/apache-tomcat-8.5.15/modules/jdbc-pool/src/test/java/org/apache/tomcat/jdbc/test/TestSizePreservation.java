@@ -16,15 +16,14 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.sql.Connection;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import org.junit.Assert;
-import org.junit.Test;
-
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolConfiguration;
 import org.apache.tomcat.jdbc.test.driver.Driver;
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.sql.Connection;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * https://bz.apache.org/bugzilla/show_bug.cgi?id=50613

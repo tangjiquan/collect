@@ -16,13 +16,12 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.sql.Connection;
-import java.sql.Statement;
-
+import org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer;
+import java.sql.Connection;
+import java.sql.Statement;
 
 public class StatementFinalizerTest extends DefaultTestCase {
 

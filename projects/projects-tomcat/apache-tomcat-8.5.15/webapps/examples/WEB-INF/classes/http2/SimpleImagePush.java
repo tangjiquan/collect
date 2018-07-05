@@ -16,15 +16,14 @@
  */
 package http2;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import org.apache.catalina.servlet4preview.http.PushBuilder;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.catalina.servlet4preview.http.PushBuilder;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class SimpleImagePush extends HttpServlet {
 

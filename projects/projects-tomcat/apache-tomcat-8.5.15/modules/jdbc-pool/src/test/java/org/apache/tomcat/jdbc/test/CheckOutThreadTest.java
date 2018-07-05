@@ -16,12 +16,11 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.sql.Connection;
-import java.util.concurrent.CountDownLatch;
+import org.junit.Test;
 
 import javax.sql.DataSource;
-
-import org.junit.Test;
+import java.sql.Connection;
+import java.util.concurrent.CountDownLatch;
 
 public class CheckOutThreadTest extends DefaultTestCase {
 

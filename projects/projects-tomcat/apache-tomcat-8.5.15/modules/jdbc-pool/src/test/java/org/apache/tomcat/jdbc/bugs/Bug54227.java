@@ -16,19 +16,17 @@
  */
 package org.apache.tomcat.jdbc.bugs;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-
-import javax.sql.PooledConnection;
-
-import static org.junit.Assert.assertNotSame;
-import static org.junit.Assert.assertSame;
-
-import org.junit.Test;
-
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
 import org.apache.tomcat.jdbc.test.DefaultProperties;
+import org.junit.Test;
+
+import javax.sql.PooledConnection;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertSame;
 
 public class Bug54227 {
 

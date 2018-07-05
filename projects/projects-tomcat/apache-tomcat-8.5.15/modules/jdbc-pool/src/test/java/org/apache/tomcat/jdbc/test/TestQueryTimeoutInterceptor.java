@@ -16,14 +16,13 @@
  */
 package org.apache.tomcat.jdbc.test;
 
-import java.sql.Connection;
-import java.sql.Statement;
-
+import org.apache.tomcat.jdbc.pool.interceptor.QueryTimeoutInterceptor;
+import org.apache.tomcat.jdbc.test.driver.Driver;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.apache.tomcat.jdbc.pool.interceptor.QueryTimeoutInterceptor;
-import org.apache.tomcat.jdbc.test.driver.Driver;
+import java.sql.Connection;
+import java.sql.Statement;
 
 public class TestQueryTimeoutInterceptor extends DefaultTestCase {
 

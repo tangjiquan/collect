@@ -17,11 +17,11 @@
 
 package org.apache.tomcat.jdbc.pool.interceptor;
 
-import java.lang.reflect.Method;
-
 import org.apache.tomcat.jdbc.pool.JdbcInterceptor;
 import org.apache.tomcat.jdbc.pool.PooledConnection;
 import org.apache.tomcat.jdbc.pool.ProxyConnection;
+
+import java.lang.reflect.Method;
 
 /**
  * Class that resets the abandoned timer on any activity on the

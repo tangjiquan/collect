@@ -15,7 +15,9 @@
         <module>study-designpattern</module>
         <module>study-springboot</module>
         <module>study-log</module>
-    </modules>
+		<module>study-springboots2</module>
+		<module>study-redis</module>
+	</modules>
 
 
 </project>

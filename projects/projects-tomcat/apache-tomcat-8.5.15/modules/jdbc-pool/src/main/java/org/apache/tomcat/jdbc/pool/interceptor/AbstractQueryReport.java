@@ -17,6 +17,10 @@
 
 package org.apache.tomcat.jdbc.pool.interceptor;
 
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
+import org.apache.tomcat.jdbc.pool.JdbcInterceptor;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
@@ -25,10 +29,6 @@ import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import org.apache.juli.logging.Log;
-import org.apache.juli.logging.LogFactory;
-import org.apache.tomcat.jdbc.pool.JdbcInterceptor;
 /**
  * Abstract class that wraps statements and intercepts query executions.
  *

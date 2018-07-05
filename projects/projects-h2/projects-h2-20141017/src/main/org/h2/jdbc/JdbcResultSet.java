@@ -3402,6 +3402,16 @@ public class JdbcResultSet extends TraceObject implements ResultSet {
         updateClob(columnLabel, x, -1);
     }
 
+    @Override
+    public <T> T getObject(int columnIndex, Class<T> type) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public <T> T getObject(String columnLabel, Class<T> type) throws SQLException {
+        return null;
+    }
+
     /**
      * Updates a column in the current or insert row.
      *

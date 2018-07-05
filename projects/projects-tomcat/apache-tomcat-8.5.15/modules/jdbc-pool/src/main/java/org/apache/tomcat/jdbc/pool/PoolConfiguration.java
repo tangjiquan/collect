@@ -16,9 +16,9 @@
  */
 package org.apache.tomcat.jdbc.pool;
 
-import java.util.Properties;
-
 import org.apache.tomcat.jdbc.pool.PoolProperties.InterceptorDefinition;
+
+import java.util.Properties;
 
 /**
  * A list of properties that are configurable for a connection pool.
