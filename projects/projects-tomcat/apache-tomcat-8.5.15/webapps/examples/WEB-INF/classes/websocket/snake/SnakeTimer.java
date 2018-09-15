@@ -19,7 +19,6 @@ package websocket.snake;
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
 
-import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**

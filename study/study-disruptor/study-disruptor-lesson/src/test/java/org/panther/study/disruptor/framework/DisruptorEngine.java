@@ -1,15 +1,13 @@
-package com.sinosoft.common.utils.makePoster;
+package org.panther.study.disruptor.framework;
 
-import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.EventFactory;
 import com.lmax.disruptor.YieldingWaitStrategy;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.EventHandlerGroup;
 import com.lmax.disruptor.dsl.ProducerType;
-import com.sinosoft.modules.weixin.vo.agent.CustomerInfoResponse;
 import org.slf4j.LoggerFactory;
 
-import java.util.*;
+import java.util.ArrayList;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

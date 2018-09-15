@@ -1,0 +1,91 @@
+该目录下是尚学堂的多线程课程
+example01
+    1. 展示java下线程不安全， 并没有按5,4,3,2,1打印
+
+example02
+    多个线程过个锁：多个线程，每个线程都可以拿到自己指定的锁，分别活动锁后执行synchronized方法里额内容
+    总结：
+        关键之synchronized取得的锁是对象锁， 而不是一把代码（方法）当做锁， 示例中线程先执行synchronized关键字
+        的方法， 那个线程就获得该方法所属的锁，两个线程获得就是两个不同的锁， 他们互不影响
+        有一种特殊的情况则是相同的锁， 在静态方法上加synchronized关键字， 表示锁是class类的， 类级别的锁
+
+example03 (对象锁的同步异步）
+    同步：同步就是共享， 如果不需要共享就没有必要同步， 同步的目的是让线程安全
+    异步：相互之间不受任何制约
+
+    A线程先持有obejct对象的锁， B线程如果在这个时候调用对象中的同步方法则需要等待，就是同步
+    A线程先持有object对象的锁， B线程可以异步调用的方法调用对象中的非synchronized修饰的方法
+
+example04 (脏读）
+    * getValue()方法上加synchronized， 那么在调用getvalue的时候需要等到锁， 这样setvalue肯定先执行， 然后再执行getvalue
+
+example05 (synchronized关键字)
+    synchronized的重入
+
+example06 （volatile关键字)
+    一个变量在多个线程中的可见性， 不具备原子性
+
+example07 （volatile关键字)
+    volatile关键字不具备synchronized关键字的原子性（同步）
+
+example08 （volatile关键字)
+    atomic 类只保证本身方法的原子性，并不保证多次操作的原子性
+    count.addAndGet()调用多次是不保证原子性的
+
+example09 （线程之间的通信)
+    线程是操作系统中独立的个体， 但这些个体如果不经过特殊处理就不能成为一个整体， 当线程存在通信指挥，系统间的交互性就更强大，
+    在提高cpu利用率的同时还会使开发人员对线程任务处理过程中进行有效的把控与监督
+    使用wait/notify方法实现线程中的通信（他们是object的方法，每个对象都有这个方法）
+    1. wait和notify必须配合synchronized关键字使用
+    2. wait方法释放锁， notify不释放锁
+
+example10 （使用wait和notify模拟Queue)
+    BlockingQueue:首先是一个队列，并且队列支持阻塞的机制， 阻塞的放入和得到数据， 我们要实现LinkedBlockingQueue的put， take
+    put:把Object放到Blockingqueue里，如果BlockQueue没有空间， 则调用此方法的线程被阻断， 直到BlockingQueue里面有空间
+    take：取走BlockingQueue里面排在首位的对象， 若BlockingQueue为空， 阻断进入等待状态直到BlockQueue有新的数据被载入
+
+example11 (ThreadLocal)
+    ThreadLoal:线程的局部变量， 是一种线程间并发访问的解决方案， 与synchronized等加锁的方式不同， ThreadLocal完全不提供锁， 而是使用空间
+    换时间，为每一个线程提供变量独立副本。以保障线程安全。
+    ThreadLocal是一个无锁的解决方案， 在高并发的情况下使用ThreadLocal可以在一定程度上减少竞争
+
+example12 (单例和多线程）
+    单例模式， 饿汉式， 懒汉式
+    在多线程并发的情况下，使用如下的比较经典的方式
+        dubbo check instance
+        static inner class
+
+example13 （同步类荣）
+    多线程使用Vector或者HashTable的示例（简单线程同步问题）
+
+example14 （并发类容器）
+    同步类容器都是串行的，线程安全， 但是不支持并操作
+    使用ConcurrentHashMap来代替同步类容器代替HashTable
+    使用CopyOnWriteList代替了Vector
+    ConcurrentMap(ConcurrentHashMap, ConcurrentSkipListMap)
+        > ConcurrentHashMap内部使用了段（Segment)来表示这些不同的部分， 每个段其实是一个小的HashTable,
+            他们有自己的锁， 只要多个修改操作发生在不同的段上， 他们就可以并发执行。把一个整体分层16个部分
+            那么最多支持16个线程并发操作
+
+example15 （并发queue）
+    在并发队列中， jdk底层提供了两种， ConcurrentLinkdQueue为代表的高性能队列， 另一个是BlockingQueue为代表的
+    阻塞队列
+    ConcurrentLinkdQueue是一个适用高并发场景下的队列， 通过无锁的方式， 实现了高并发， 高性能， ConcurrentLinkdQueue
+    性能优于BlockingQueue,他是基于链接节点的无界安全队列， 遵循先进线出， 该队列不允许null
+    add()和offer()都是加入元素的方法，
+    poll（）和peek（）都是取元素， 但前者会删除元素， 后者不会删除
+
+    ArrayBlockingQueue：基于数组的阻塞队列时限，在ArrayBlockingQueue内部， 维护了一个定长数组，以便缓存队列中的
+    数据对象， 其内部没有实现读写分离， 也就意味着生产和消费不能完全并行， 长度需要自己定义， 开源指定先进先出或者后进先出，
+    页叫有界队列
+    LinkedBlockingQueue:基于链表的阻塞队列， 内外维护了着一个数据缓冲队列， LinkedBlockingQueue之所以能够高效的处理并发数据
+    适应为内部实现了分离， （读写分离两个锁， 从而实现生产者和消费者操作完全并行， 是一个无界队列
+    SynchronousQueue：一种没有缓冲区的队列， 生产者产生的数据直接被消费者获取并消费
+    PriorityBlockingQueue：基于优先级的阻塞队列（优先级的判断是通过构造函数传入的Compator对象来决定， 也就是说传入队列的对象必须实现
+    Comparable接口，在实现PriorityBlockingQueue的时候，内部控制先出同步锁采用公平锁， 他也 是一个无界队列
+    Delayqueue:带有延迟时间的Queue， 其中的元素只有当其指定的延迟时间懂啊了， 才能够从队列中获取到该元素， DelayQueue中的
+    元素必须实现Delayed接口， DelayQueue是一个没有大小限制的队列， 应用场景很多， 比如对缓存操作的数据进行移除，任务超时处理，
+    空闲连接的关闭等等
+
+
+

@@ -1,4 +1,4 @@
-package org.panther.study.concurrency.example01.count;
+package org.panther.study.concurrency.example01.atomic;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date: created in 下午11:14 2018-07-07
  * @version: V1.0
  */
-public class CountExample2 {
+public class AtomicExample1 {
 
 	public static int clientTotal = 5000;
 

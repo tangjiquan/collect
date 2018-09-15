@@ -1,11 +1,12 @@
 package org.panther.study.threadandrunnable02.example04;
 
 /**
+ * getValue()方法上没有加synchronized， 导致在getvalue的时候还是拿的老值
  * @author: Kevin
  * @date: created in 下午2:36 2018-08-26
  * @version: V1.0
  */
-public class DirtyRead {
+public class DirtyRead01 {
 
 	private String username ="11";
 	private String password ="22";
@@ -28,7 +29,7 @@ public class DirtyRead {
 
 
 	public static void main(String[] args) throws InterruptedException {
-		final DirtyRead dr = new DirtyRead();
+		final DirtyRead01 dr = new DirtyRead01();
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {

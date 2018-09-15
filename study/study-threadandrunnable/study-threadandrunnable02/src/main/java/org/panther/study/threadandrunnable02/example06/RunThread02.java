@@ -2,13 +2,14 @@ package org.panther.study.threadandrunnable02.example06;
 
 /**
  * 想让执行死循环的run方法一直在执行， 3秒后讲isRunning设置为false后， 死循环会停止
+ * volatile会让线程执行引擎到主内存中读取变量值
  * @author: Kevin
  * @date: created in 下午11:27 2018-09-05
  * @version: V1.0
  */
-public class RunThread extends Thread{
+public class RunThread02 extends Thread{
 
-	private boolean isRunning = true;
+	private volatile boolean isRunning = true;
 	private void setRunning(boolean isRunning){
 		this.isRunning = isRunning;
 	}
@@ -23,7 +24,7 @@ public class RunThread extends Thread{
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		RunThread rt = new RunThread();
+		RunThread02 rt = new RunThread02();
 		rt.start();
 		Thread.sleep(3000);
 		rt.setRunning(false);

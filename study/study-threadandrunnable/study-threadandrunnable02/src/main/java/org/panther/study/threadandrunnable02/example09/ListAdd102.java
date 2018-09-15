@@ -11,7 +11,7 @@ import java.util.List;
  * @date: created in 上午11:23 2018-09-09
  * @version: V1.0
  */
-public class ListAdd101 {
+public class ListAdd102 {
 	private volatile static List list = new ArrayList();
 
 	public void add(){
@@ -23,28 +23,42 @@ public class ListAdd101 {
 	}
 
 	public static void main(String[] args){
-		final ListAdd101 listAdd1 = new ListAdd101();
+		final ListAdd102 listAdd1 = new ListAdd102();
+
+		final Object lock = new Object();
 
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				for(int i = 0; i<10; i++){
-					listAdd1.add();
-					System.out.println("当前线程"+ Thread.currentThread().getName() + "添加了一个元素");
-					try {
-						Thread.sleep(500);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
+				synchronized (lock){
+					for(int i = 0; i<10; i++){
+						listAdd1.add();
+						System.out.println("当前线程"+ Thread.currentThread().getName() + "添加了一个元素");
+						try {
+							Thread.sleep(500);
+							if(listAdd1.size() == 5){
+								System.out.println("已发出通知");
+								lock.notify();//不释放锁
+							}
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
 					}
 				}
+
 			}
 		}, "t1");
 
 		Thread t2 = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				while(true){
-					if(listAdd1.size() == 5){
+				synchronized (lock){
+					if(listAdd1.size() != 5){
+						try {
+							lock.wait();//wait()释放锁
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
 						System.out.println("当前线程接收到通知" + Thread.currentThread().getName() + "list.size = 5线程停止");
 						throw  new RuntimeException();
 					}
@@ -52,8 +66,9 @@ public class ListAdd101 {
 			}
 		}, "t2");
 
-		t1.start();
+		// t2必须先执行
 		t2.start();
+		t1.start();
 
 	}
 }

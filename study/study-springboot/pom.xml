@@ -14,7 +14,8 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>study-springboot01</module>
-    </modules>
+		<module>study-springboot02</module>
+	</modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

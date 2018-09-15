@@ -1,4 +1,4 @@
-package com.sinosoft.common.utils.makePoster;
+package org.panther.study.disruptor.framework;
 
 import java.util.ArrayList;
 

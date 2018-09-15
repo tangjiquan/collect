@@ -6,7 +6,7 @@ package org.panther.study.threadandrunnable02.example06;
  * @date: created in 下午11:27 2018-09-05
  * @version: V1.0
  */
-public class RunThread extends Thread{
+public class RunThread01 extends Thread{
 
 	private boolean isRunning = true;
 	private void setRunning(boolean isRunning){
@@ -23,7 +23,7 @@ public class RunThread extends Thread{
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		RunThread rt = new RunThread();
+		RunThread01 rt = new RunThread01();
 		rt.start();
 		Thread.sleep(3000);
 		rt.setRunning(false);

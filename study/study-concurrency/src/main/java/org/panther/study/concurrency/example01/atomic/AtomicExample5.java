@@ -1,23 +1,36 @@
 package org.panther.study.concurrency.example01.atomic;
 
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 /**
  * @author: Kevin
  * @date: created in 下午11:14 2018-07-07
  * @version: V1.0
  */
-public class AtomicExample4 {
+public class AtomicExample5 {
 
+	private static AtomicIntegerFieldUpdater<AtomicExample5> updater = AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");
 
-	private static AtomicReference<Integer> count = new AtomicReference<Integer>(0);
+	private volatile int count = 100;
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
 
 	public static void main(String[] args){
-		count.compareAndSet(0, 1);
-		count.compareAndSet(1, 2);
-		count.compareAndSet(2, 5);
-		count.compareAndSet(5, 1);
-		System.out.println(count.get());
+		AtomicExample5 atomicExample5 = new AtomicExample5();
+		if(updater.compareAndSet(atomicExample5, 100, 200)){
+			System.out.println("success1！！！" + atomicExample5.getCount());
+		}
+		if(updater.compareAndSet(atomicExample5, 100, 200)){
+			System.out.println("success12222" + atomicExample5.getCount());
+		}else{
+			System.out.println("error！！！" + atomicExample5.getCount());
+		}
 	}
 
 

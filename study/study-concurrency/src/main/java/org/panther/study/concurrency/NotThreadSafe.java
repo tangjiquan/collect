@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 课程里标记安全的类的写法
+ * 课程里标记安全【线程不安全】类的写法
  *
  * @author: Kevin
  * @date: created in 下午10:27 2018-07-07
@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.SOURCE)
-public @interface ThreadSafe {
+public @interface NotThreadSafe {
 
 	String value() default  "";
 }

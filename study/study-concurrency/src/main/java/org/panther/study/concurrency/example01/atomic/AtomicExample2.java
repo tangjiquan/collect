@@ -4,20 +4,20 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * @author: Kevin
  * @date: created in 下午11:14 2018-07-07
  * @version: V1.0
  */
-public class AtomicExample1 {
+public class AtomicExample2 {
 
 	public static int clientTotal = 5000;
 
 	public static int threadTotal = 200;
 
-	public static AtomicInteger count = new AtomicInteger(0);
+	public static AtomicLong count = new AtomicLong(0);
 
 	public static void main(String[] args) throws InterruptedException {
 		ExecutorService executorService = Executors.newCachedThreadPool();

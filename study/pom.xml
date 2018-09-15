@@ -17,6 +17,12 @@
         <module>study-log</module>
 		<module>study-springboots2</module>
 		<module>study-redis</module>
+		<module>study-concurrency</module>
+		<module>study-threadandrunnable</module>
+		<module>study-seckill</module>
+		<module>study-cglib</module>
+		<module>study-coroutines</module>
+		<module>study-disruptor</module>
 	</modules>
 
 

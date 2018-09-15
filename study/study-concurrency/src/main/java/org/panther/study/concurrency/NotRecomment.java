@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.SOURCE)
-public @interface Recomment {
+public @interface NotRecomment {
 
 	String value() default  "";
 }

@@ -4,11 +4,12 @@ import java.util.Iterator;
 import java.util.Vector;
 
 /**
+ *
  * @author: Kevin
  * @date: created in 上午9:44 2018-09-10
  * @version: V1.0
  */
-public class Tickets {
+public class Tickets01 {
 	public static void main(String[] args){
 		// 初始化火车票并添加火车票，线程同步使用Vector代替ArrayList，HashTable代替HashMap
 		final Vector<String> tickes = new Vector<String>();
@@ -21,9 +22,6 @@ public class Tickets {
 			tickes.remove(20);
 		}
 
-		for(int i=1; i<10; i++){
-
-		}
 	}
 
 }

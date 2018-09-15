@@ -1,0 +1,67 @@
+慕课网的热部署
+    1. 提高开发调试效率
+    2. 提高发布， 运维效率
+
+课程安排
+    1. 热部署原理剖析
+    2. 案例分析
+    3. 项目演示
+    4. 测试
+    5. 发布程序
+    6. 课程总结
+
+java热部署和热加载的联系
+    部署方式：
+        1. 热部署在服务器运行时重新部署项目 - 加载整个应用 - 更多的是生产环境使用 -
+        2. 热加载在运行时重新加载class- 加载修改的class文件 - 更多是在开发环境使用 - 难以监控
+
+java类的加载过程：
+    初始化jvm - 产生启动类加载器 - 标准扩展类加载器 - 系统类加载器 - 加载class文件
+类加载的5个阶段
+    加载 - 验证 - 准备 - 解析 - 初始化
+
+final 修饰的是常量， 会将数据放到常量池中
+
+java类加载器的特点:
+    1. 有AppClass Loader（系统类加载器）开始加载指定的类
+    2. 类加载器将加载任务交给其父， 如果其父找不到，再有自己去加载
+    3. Bootstrap Loader(启动类加载器）是最顶级的类加载器
+
+java类的热部署
+    1. 类的热加载
+    2. 配置tomcat
+        > 第一种方式： 在tomcat/conf/server.xml中的<host></host>内部添加<context/>标签
+        > 第二种方式：在%TOMCAT_HOME%/conf/Catalina/localhost中添加一个xml
+            hot.xml 如果添加的文件名是hot.xml，那么访问路径是：http://localhost:8080/hot/add
+               <?xml version="1.0" encoding="UTF-8"?>
+               <Context docBase="D:/app/web" reloadable="true"/>
+
+        > 第三种方式：直接把项目放到webapp文件中
+
+类的层次结构清晰， 修改某个java类文件不需要重启服务， 或者重新编译运行的程序
+
+
+spring boot的简介
+    > 开发restful风格的微服务框架
+    > 微服务，自动化， 横向扩展
+    > 精简配置与整合其他工具
+
+**********代码内容*************
+example1
+    > 实现java热加载功能，实现了热加载功能
+
+example2
+    > springboot功能使用
+
+example3
+    热部署的两种方式：
+    spring-boot-devtools
+
+
+example4
+    springboot以jar包的方式发布
+        > java -jar study-springboot02-1.5.9.RELEASE.jar
+
+    springboot项目以war包的方式发布
+        > HotDeployApplication需要继承 SpringBootServletInitializer
+

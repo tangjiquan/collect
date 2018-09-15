@@ -5,15 +5,18 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * atomic 类只保证本身方法的原子性，并不保证多次操作的原子性
+ * count.addAndGet()调用多次是不保证原子性的
+ *
  * @author: Kevin
  * @date: created in 下午8:36 2018-09-08
  * @version: V1.0
  */
-public class AtomicUser {
+public class AtomicUser02 {
 
 	private static AtomicInteger count = new AtomicInteger(0);
 
-	public int multAdd() {
+	public  synchronized int multAdd() {
 		try {
 			Thread.sleep(100);
 		} catch (InterruptedException e) {
@@ -28,7 +31,7 @@ public class AtomicUser {
 	}
 
 	public static void main(String[] args){
-		final AtomicUser au = new AtomicUser();
+		final AtomicUser02 au = new AtomicUser02();
 		List<Thread> ts = new ArrayList<Thread>();
 		for(int i=0; i<100; i++){
 			ts.add(new Thread(new Runnable() {

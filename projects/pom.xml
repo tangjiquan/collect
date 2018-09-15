@@ -23,6 +23,8 @@
 		<module>projects-HikariCP</module>
 		<module>projects-ownweb</module>
 		<module>projects-spring</module>
+		<module>projects-disruptor</module>
+		<module>projects-jdk</module>
 	</modules>
 
     <properties>

@@ -5,7 +5,7 @@ package org.panther.study.threadandrunnable02.example03;
  * @date: created in 下午2:13 2018-08-26
  * @version: V1.0
  */
-public class MyObject {
+public class MyObject02 {
 
 	public synchronized void m1(){
 		try {
@@ -16,12 +16,12 @@ public class MyObject {
 		}
 	}
 
-	public void m2(){
+	public  synchronized void m2(){
 		System.out.println(Thread.currentThread().getName());
 	}
 
 	public static void main(String[] args){
-		final MyObject m =new MyObject();
+		final MyObject02 m =new MyObject02();
 		Thread t1 = new Thread(new Runnable() {
 			@Override
 			public void run() {

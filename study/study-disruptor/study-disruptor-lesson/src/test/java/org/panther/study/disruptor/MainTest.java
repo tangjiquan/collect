@@ -1,4 +1,6 @@
-package org.panther.study.disruptor.framework;
+package org.panther.study.disruptor;
+
+import org.junit.Test;
 
 /**
  * @author: Kevin
@@ -6,4 +8,9 @@ package org.panther.study.disruptor.framework;
  * @version: V1.0
  */
 public class MainTest {
+
+	@Test
+	public void Test1(){
+
+	}
 }

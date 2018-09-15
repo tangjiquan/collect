@@ -22,9 +22,7 @@ import org.apache.tomcat.jdbc.pool.ConnectionPool;
 import org.apache.tomcat.jdbc.pool.PoolProperties.InterceptorProperty;
 import org.apache.tomcat.jdbc.pool.PooledConnection;
 
-import javax.management.openmbean.*;
 import java.text.SimpleDateFormat;
-import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**

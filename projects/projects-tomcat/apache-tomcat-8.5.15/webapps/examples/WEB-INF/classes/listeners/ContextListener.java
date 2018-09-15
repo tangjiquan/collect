@@ -17,9 +17,6 @@
 package listeners;
 
 
-import javax.servlet.*;
-
-
 /**
  * Example listener for context-related application events, which were
  * introduced in the 2.3 version of the Servlet API.  This listener

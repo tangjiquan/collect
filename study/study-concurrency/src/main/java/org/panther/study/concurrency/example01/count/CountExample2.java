@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date: created in 下午11:14 2018-07-07
  * @version: V1.0
  */
-public class CountExample1 {
+public class CountExample2 {
 
 	public static int clientTotal = 5000;
 

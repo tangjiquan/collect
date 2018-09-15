@@ -11,7 +11,7 @@ import java.util.List;
  * @date: created in 上午11:23 2018-09-09
  * @version: V1.0
  */
-public class ListAdd1 {
+public class ListAdd101 {
 	private volatile static List list = new ArrayList();
 
 	public void add(){
@@ -23,7 +23,7 @@ public class ListAdd1 {
 	}
 
 	public static void main(String[] args){
-		final ListAdd1 listAdd1 = new ListAdd1();
+		final ListAdd101 listAdd1 = new ListAdd101();
 
 		Thread t1 = new Thread(new Runnable() {
 			@Override

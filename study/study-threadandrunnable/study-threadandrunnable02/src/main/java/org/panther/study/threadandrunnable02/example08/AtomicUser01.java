@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date: created in 下午8:36 2018-09-08
  * @version: V1.0
  */
-public class AtomicUser {
+public class AtomicUser01 {
 
 	private static AtomicInteger count = new AtomicInteger(0);
 
@@ -28,7 +28,7 @@ public class AtomicUser {
 	}
 
 	public static void main(String[] args){
-		final AtomicUser au = new AtomicUser();
+		final AtomicUser01 au = new AtomicUser01();
 		List<Thread> ts = new ArrayList<Thread>();
 		for(int i=0; i<100; i++){
 			ts.add(new Thread(new Runnable() {

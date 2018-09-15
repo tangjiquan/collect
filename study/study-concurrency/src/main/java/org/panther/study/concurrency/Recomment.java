@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 课程里标记【线程安全】的类的写法
+ * 课程里标记【推荐】的类的写法
  *
  * @author: Kevin
  * @date: created in 下午10:27 2018-07-07

@@ -1,14 +1,13 @@
 package org.panther.study.threadandrunnable02.example02;
 
 /**
- * 一个对象一把锁
- * 两个对象有两个锁， 所以自己执行自己
- *
+ * 在方法上加上static后， 不管是多个线程操作不同对象， 都是一个一个的排队执行
+ * 在静态方法上加上synchronized，那么这个是类级别的锁
  * @author: Kevin
  * @date: created in 下午1:33 2018-08-26
  * @version: V1.0
  */
-public class MultiThread01 {
+public class MultiThread02 {
 	private static int num = 0;
 
 	public static synchronized  void printNum(String tag){
@@ -27,8 +26,8 @@ public class MultiThread01 {
 	}
 
 	public static void main(String[] args){
-		final MultiThread01 m1 = new MultiThread01();
-		final MultiThread01 m2 = new MultiThread01();
+		final MultiThread02 m1 = new MultiThread02();
+		final MultiThread02 m2 = new MultiThread02();
 
 		Thread t1 = new Thread(new Runnable() {
 			@Override

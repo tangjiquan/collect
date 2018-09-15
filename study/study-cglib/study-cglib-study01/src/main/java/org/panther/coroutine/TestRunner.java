@@ -6,4 +6,13 @@ package org.panther.coroutine;
  * @version: V1.0
  */
 public class TestRunner {
+	public static void main(String args[]) {
+		MyCoroutineRunner myCoroutineRunner = new MyCoroutineRunner();
+		myCoroutineRunner.join(new MyCoroutine1());
+		myCoroutineRunner.join(new MyCoroutine2());
+		myCoroutineRunner.join(new MyCoroutine3());
+		System.out.println("=== Start ===");
+		myCoroutineRunner.execute();
+		System.out.println("=== All tasks finished ! ===");
+	}
 }

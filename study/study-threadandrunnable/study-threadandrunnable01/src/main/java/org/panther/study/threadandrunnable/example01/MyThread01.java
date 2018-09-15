@@ -1,4 +1,4 @@
-package org.panther.study.threadandrunnable;
+package org.panther.study.threadandrunnable.example01;
 
 /**
  * @author: Kevin

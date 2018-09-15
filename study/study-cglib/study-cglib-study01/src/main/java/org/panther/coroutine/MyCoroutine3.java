@@ -8,19 +8,12 @@ import com.offbynull.coroutines.user.Coroutine;
  * @date: created in 下午4:57 2018-08-13
  * @version: V1.0
  */
-public class MyCoroutine2 implements Coroutine {
+public class MyCoroutine3 implements Coroutine {
 
 	@Override
 	public void run(Continuation c) {
-		System.out.println("[TASK 1] In task 1, doing something...");
-		System.out.println("[TASK 1] Switch to other task.");
-		c.suspend();
-		System.out.println("[TASK 1] In task 1, doing something...");
-		System.out.println("[TASK 1] Switch to other task.");
-		c.suspend();
-		System.out.println("[TASK 1] In task 1, doing something...");
-		System.out.println("[TASK 1] Finish task 1 !");
+		System.out.println("[TASK 3] In task 3, doing something...");
+		System.out.println("[TASK 3] Finish task 3 !");
 	}
-
 
 }
