@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>collect</artifactId>
-        <groupId>org.panther</groupId>
+        <groupId>com.panther</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -25,6 +25,7 @@
 		<module>projects-spring</module>
 		<module>projects-disruptor</module>
 		<module>projects-jdk</module>
+		<module>projects-motan</module>
 	</modules>
 
     <properties>
