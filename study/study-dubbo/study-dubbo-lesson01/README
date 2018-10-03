@@ -1,0 +1,19 @@
+尚学堂的dubbo学习视频
+
+chapter01（dubbo的简单使用）
+
+chapter02（服务依赖的关系）
+
+chapter03（集群容错）
+
+chapter04（负载均衡）
+    不要写死到spring的xml中， 而是使用spring的管控台进行操作
+
+chapter05 （直连开发模式和API详解）
+    越过zookeeper进行配置， 消费者和提供者直接交互
+
+chapter06 (dubbox入门和Rest风格）
+    dubbox怎样将集成rest风格
+    服务提供者使用注解的方式， 服务消费者使用xml配置的方式
+    怎使用http与dubbox进行通讯
+    一个服务既可以用dubbo协议暴露， 也可以用rest的方式暴露

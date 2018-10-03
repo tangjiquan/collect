@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+	<!--具体实现的bean-->
+	<bean id="dependency-service" class="com.panther.study.dubbo.lesson01.chapter02.dependency.provider.impl.DependencyServiceImpl"/>
+
+	<!--提供方应用信息-->
+	<dubbo:application name="dependency"/>
+
+	<!-- 使用zookeeper注册中心 -->
+	<!--<dubbo:registry address="zookeeper://192.168.1.111:2181?backup=192.168.1.112:2181,192.168.1.113:2181" />-->
+	<dubbo:registry address="zookeeper://47.98.38.11:2181"/>
+
+	<!--使用dubbo协议在20880上暴露接口-->
+	<dubbo:protocol name="dubbo" port="20880"/>
+
+	<!--声明需要暴露的接口 写操作可以设置retries=0 避免重复调用SOA服务-->
+	<dubbo:service interface="com.panther.study.dubbo.lesson01.chapter02.dependency.provider.DependencyService" ref="dependency-service" retries="0"/>
+
+</beans>

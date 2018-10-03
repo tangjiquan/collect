@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+	<!-- 具体实现的bean-->
+	<bean id="directService"  class="com.panther.study.dubbo.lesson01.chapter05.dirct.provider.impl.DirectServiceImpl"/>
+
+	<!-- 提供应用信息， 用于计算依赖 -->
+	<dubbo:application name="direct-provider"/>
+
+	<!-- 使用zookeeper注册中心进行暴露 只订阅的方式：registry=false -->
+	<dubbo:registry address="zookeeper://47.98.38.11:2181"/>
+
+	<!--用dubbo协议暴露20880端口-->
+	<dubbo:protocol name="dubbo" port="20880"/>
+
+	<!-- 直连服务提供者：是在消费端进行配置的， 而不是在服务提供端， 所以这里不要配置任何信息 -->
+	<dubbo:service retries="0" ref="directService"
+			interface="com.panther.study.dubbo.lesson01.chapter05.dirct.provider.DirectService" />
+
+</beans>

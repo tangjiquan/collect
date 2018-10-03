@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<!-- 引入zc-com通用类属性注入配置文件 -->
+	<util:properties id="zcparams" location="classpath:params.properties"></util:properties>
+
+	<dubbo:application name="provider" owner="programmer" organization="dubbox"/>
+
+	<dubbo:registry address="zookeeper://47.98.38.11:2181"/>
+
+	<dubbo:annotation package="com.panther" />
+
+	<dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.panther.study.dubbo.lesson01.chapter06.util.SerializationOptimizerImpl"/>
+
+	<dubbo:protocol name="rest" server="tomcat" port="8888" contextpath="provider" accepts="500"/>
+
+	<!-- 声明需要暴露的服务接口 -->
+	<!-- 同时提供本地dubbo方法调用和rest方法调用 -->
+	<!--
+	<dubbo:service interface="bhz.service.UserService" ref="userService" protocol="rest,dubbo" />
+	-->
+
+	<!--
+   <bean id="userService" class="bhz.service.impl.UserServiceImpl" />
+   <bean id="simpleService" class="bhz.service.impl.SimpleServiceImpl" />
+   -->
+</beans>

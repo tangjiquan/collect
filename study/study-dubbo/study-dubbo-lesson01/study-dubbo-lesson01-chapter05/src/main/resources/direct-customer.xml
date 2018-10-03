@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+
+	<!-- 消费方应用名， 用于计算依赖关系， 不是匹配条件， 不要提供方一样 -->
+	<dubbo:application name="direct-customer"/>
+
+	<!-- 使用zookeeper注册中心进行暴露 只订阅的方式：registry=false -->
+	<dubbo:registry address="zookeeper://47.98.38.11:2181"/>
+
+	<!-- 直接提供者配置， 在这里（也就是消费端进行配置） -->
+	<dubbo:reference id="directService" check="false"
+				   url="dubbo://localhost:20880"
+			interface="com.panther.study.dubbo.lesson01.chapter05.dirct.provider.DirectService" />
+
+</beans>
