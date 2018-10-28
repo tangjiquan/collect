@@ -26,6 +26,7 @@
 		<module>projects-disruptor</module>
 		<module>projects-jdk</module>
 		<module>projects-motan</module>
+		<module>projects-mybatis</module>
 	</modules>
 
     <properties>
