@@ -87,5 +87,9 @@ example15 （并发queue）
     元素必须实现Delayed接口， DelayQueue是一个没有大小限制的队列， 应用场景很多， 比如对缓存操作的数据进行移除，任务超时处理，
     空闲连接的关闭等等
 
+example16(Futuer模式）
+    使用网购下订单的模式， 购买完了就返回一个成功， 发货是后续的动作
 
+example17(master-slave)
+    master， slave模式
 

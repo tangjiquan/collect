@@ -1,0 +1,5 @@
+spring:
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    in-memory: true
+    spring.activemq.non-blocking-redelivery: false

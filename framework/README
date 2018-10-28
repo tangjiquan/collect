@@ -1,0 +1,31 @@
+## 整体项目规划 ##
+    pjsuite-core
+        ioc
+        aop
+        log
+        cron
+
+    pjsutte-commons
+        HttpUtils
+        ExeSql
+        ExcelUtils
+        StringUtils
+        BeanUtils
+        IOUtils
+        ObjectUtils
+        ExceptionUtils
+        JsonUtils
+        XmlUtils
+
+    pjtuite-db
+        orm
+
+    pjsuite-network
+        httpserver
+        websocket
+
+    pjsuite-cache
+    pjsuite-rpc
+    pjsuite-boot
+
+

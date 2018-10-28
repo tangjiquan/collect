@@ -69,7 +69,7 @@ public interface FactoryBean {
 	 * @throws Exception in case of creation errors
 	 * @see FactoryBeanNotInitializedException
 	 */
-	//������ FactoryBean ������ Bean ʵ������� isSingleton() ���� true �����ʵ����ŵ� Spring �����е�ʵ��������У�
+	//?????? FactoryBean ?????? Bean ???????? isSingleton() ???? true ???????????? Spring ?????��??????????��?
 	Object getObject() throws Exception;
 
 	/**
@@ -91,7 +91,7 @@ public interface FactoryBean {
 	 * or <code>null</code> if not known at the time of the call
 	 * @see ListableBeanFactory#getBeansOfType
 	 */
-	//���� FactoryBean ������ Bean ���͡�
+	//???? FactoryBean ?????? Bean ?????
 	Class getObjectType();
 
 	/**
@@ -117,7 +117,7 @@ public interface FactoryBean {
 	 * @see #getObject()
 	 * @see SmartFactoryBean#isPrototype()
 	 */
-	//������ FactoryBean ������ Bean ʵ������������ singleton ���� prototype ��
+	//?????? FactoryBean ?????? Bean ????????????? singleton ???? prototype ??
 	boolean isSingleton();
 
 }

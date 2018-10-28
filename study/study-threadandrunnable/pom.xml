@@ -18,6 +18,7 @@
 	<modules>
 		<module>study-threadandrunnable01</module>
 		<module>study-threadandrunnable02</module>
+		<module>study-threadandrunnable03</module>
 	</modules>
 
 	<properties>

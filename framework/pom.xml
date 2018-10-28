@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>collect</artifactId>
-        <groupId>org.panther</groupId>
+        <groupId>com.panther</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -15,7 +15,8 @@
     <modules>
         <module>framework-core</module>
         <module>framework-cache</module>
-        <module>framework-mq</module>
+        <module>framework-commons</module>
+        <module>framework-client</module>
     </modules>
 
     <properties>
@@ -36,7 +37,6 @@
         <developer>
             <name>kevin</name>
             <email>249552742@qq.com</email>
-            <roles>developer</roles>
         </developer>
     </developers>
 

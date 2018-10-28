@@ -23,6 +23,11 @@
 		<module>study-cglib</module>
 		<module>study-coroutines</module>
 		<module>study-disruptor</module>
+		<module>study-jdk</module>
+		<module>study-springboot-plugin</module>
+		<module>study-monitorandtuning</module>
+		<module>study-dubbo</module>
+		<module>study-netty</module>
 	</modules>
 
 

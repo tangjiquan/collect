@@ -1,0 +1,25 @@
+java高并发编程详解 - 汪文君 读书笔记
+
+
+chapter03
+    example02
+        join某线程A， 会使当前线程B进入等待， 直到线程A结束生命周期， 或者到达给定的时间， 那么在此期间线程B是处于
+        BLOCKED的， 而不是线程A
+
+chapter04
+    example01
+        多线程情况下， 买票数据就会不一致
+    example02
+        1. synchronized关键字
+            > 同步方法
+            [default|public|private|protected] synchronized [static] type method()
+            > 同步代码块
+            private final Object MUTEX = new Object();
+            public void sync(){
+                synchronized(MUTEX){
+                    ....
+                }
+            }
+
+chapter05
+    example01
