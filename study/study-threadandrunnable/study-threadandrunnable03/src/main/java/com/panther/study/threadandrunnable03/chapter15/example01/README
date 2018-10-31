@@ -1,0 +1,10 @@
+案例目标：对线程执行增加开观察的能力
+关键设计点1：
+    在接口Observable中定义与Thread同样的方法用于屏蔽Thread的其他API， 在使用的过程中使用Observable声明ObservableThread
+    的类型， 如果使用者还想知道更多的关于Thread的API， 只需要在Observable接口中增加即可
+关键设计点2：
+    将ObservableThread中的run方法修饰为final， 或者将ObservableThread类修饰为final， 防止子类继承重写， 导致整个
+    生命周期的监控失效， 任务逻辑的执行单元是存在run方法中的，而在ObservableThread中， 我们摒弃了这点， 使其专门监控
+    业务执行单元的生命周期，而将真正的业务逻辑执行单元交给一个可返回计算结果的接口Task
+关键设计点3:
+    ObservableThread本身的run方法充当了事件源的发起者， 而TaskLife则扮演了事件回调的响应者
