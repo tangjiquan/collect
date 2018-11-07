@@ -28,6 +28,7 @@
 		<module>study-monitorandtuning</module>
 		<module>study-dubbo</module>
 		<module>study-netty</module>
+		<module>study-algorithm</module>
 	</modules>
 
 
