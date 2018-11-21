@@ -27,6 +27,7 @@
 		<module>projects-jdk</module>
 		<module>projects-motan</module>
 		<module>projects-mybatis</module>
+		<module>projects-tio</module>
 	</modules>
 
     <properties>
