@@ -1,0 +1,45 @@
+## java多线程编程实战+设计模式 ##
+
+默认情况下父线程是守护线程， 则子线程也是守护线程
+父线程是用户线程则子线程也是用户线程
+父线程在创造子线程之前可以调用Thread实例的setDaemon方法来修改线程的这一属性
+
+1.6 线程的优势和风险
+    优势：
+        1. 提高系统的吞吐量
+        2. 提高响应性能
+        3. 充分利用多核cpu
+        4. 最小化对系统资源的使用
+        5. 简化程序的结构
+    缺点：
+        1. 线程安全问题
+        2. 线程的生命特征问题
+        3. 上下文切换消耗资源
+        4. 可靠性不强
+2.2
+    1. 不使用锁的情况下保证线程安全
+        Immutable Object(不可变对象）模式
+        Thread Specific Storage（线程特有存储）
+        Serial Thread Confinement(串行线程封闭）
+
+    2. 优雅的停机线程
+        Two-phase Termination(两阶段终止）
+
+    3. 线程协作
+        Guarded Suspension(保护性暂挂)
+        Producer-Consumer(生产者/消费者）
+
+    4. 提供并发性，减少等待
+        Promise(承诺模式）
+        Active Object（主动模式）
+        Pipeline(流水线）
+
+    5. 提高相应性
+        Master-Slave(主仆模式）
+        Half-sync/Half-async(半同步/半异步）
+
+    6. 减少资源消耗
+        Thread Pool（线程池模式）
+        Serial Thread Confinement(串行线程封闭模式)
+
+
