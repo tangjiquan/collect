@@ -2,7 +2,6 @@ package org.tio.utils.cache.guavaredis;
 
 import org.redisson.api.RTopic;
 import org.redisson.api.RedissonClient;
-import org.redisson.api.listener.MessageListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tio.utils.cache.AbsCache;
@@ -16,7 +15,6 @@ import org.tio.utils.hutool.StrUtil;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * @author tanyaowu
@@ -46,7 +44,7 @@ public class GuavaRedisCache extends AbsCache {
 			synchronized (GuavaRedisCache.class) {
 				if (!inited) {
 					topic = redisson.getTopic(CACHE_CHANGE_TOPIC);
-					topic.addListener(CacheChangedVo.class, new MessageListener<CacheChangedVo>() {
+					/*topic.addListener(CacheChangedVo.class, new MessageListener<CacheChangedVo>() {
 						@Override
 						public void onMessage(CharSequence channel, CacheChangedVo cacheChangedVo) {
 							String clientid = cacheChangedVo.getClientId();
@@ -75,7 +73,7 @@ public class GuavaRedisCache extends AbsCache {
 							}
 						}
 					});
-					inited = true;
+					inited = true;*/
 				}
 			}
 		}
