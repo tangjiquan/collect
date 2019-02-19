@@ -29,6 +29,9 @@
 		<module>study-dubbo</module>
 		<module>study-netty</module>
 		<module>study-algorithm</module>
+		<module>study-javascript</module>
+		<module>study-jpo</module>
+		<module>study-pool</module>
 	</modules>
 
 

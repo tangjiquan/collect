@@ -2,7 +2,7 @@ package com.panther.study.threadandrunnable04.chapter01.example01;
 
 /**
  * 执行结果
-
+	所有程序仍然是运行在同一个线程中
 	 The main method was executed by thread:main
 	 The dosomething method was exectued by thread :main
 	 Do something with java thread

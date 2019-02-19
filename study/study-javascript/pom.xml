@@ -8,15 +8,21 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.panther</groupId>
-	<artifactId>study-algorithm</artifactId>
-	<packaging>pom</packaging>
+
+	<groupId>com.panther</groupId>
+	<artifactId>study-javascript</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<modules>
-		<module>study-algorithm01</module>
-		<module>study-algorithm02</module>
+		<module>study-javascript-framework</module>
 	</modules>
+	<packaging>pom</packaging>
 
-	<name>study-algorithm</name>
+	<name>study-javascript Maven Webapp</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
 
 </project>
