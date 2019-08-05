@@ -13,10 +13,7 @@
 	<packaging>pom</packaging>
 
 	<name>study-seckill</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
 	<modules>
-		<module>study-seckill01</module>
 		<module>study-seckill01</module>
 	</modules>
 

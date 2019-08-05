@@ -14,7 +14,6 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>projects-fourinone</module>
-        <module>projects-commons-cli</module>
         <module>projects-zbus</module>
 		<module>projects-slf4j</module>
 		<module>projects-h2</module>
@@ -24,23 +23,9 @@
 		<module>projects-spring</module>
 		<module>projects-disruptor</module>
 		<module>projects-jdk</module>
-		<module>projects-motan</module>
 		<module>projects-mybatis</module>
 		<module>projects-tio</module>
-		<module>project-quartz</module>
 		<module>projects-quartz</module>
 	</modules>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 </project>

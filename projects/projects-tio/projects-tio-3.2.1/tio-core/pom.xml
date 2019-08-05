@@ -4,12 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>tio-core</artifactId>
 	<name>${project.artifactId}</name>
-
 	<parent>
-		<groupId>org.t-io</groupId>
-		<artifactId>tio-parent</artifactId>
-		<version>projects-tio-3.2.1</version>
-		<relativePath>../../projects-tio-3.2.1/pom.xml</relativePath>
+		<artifactId>projects-tio-3.2.1</artifactId>
+		<groupId>org.panther</groupId>
+		<version>3.2.1.v20181024-RELEASE</version>
 	</parent>
 
 	<dependencies>

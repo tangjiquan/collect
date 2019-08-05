@@ -9,16 +9,12 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.panther</groupId>
 	<artifactId>study-monitorandtuning</artifactId>
 	<packaging>pom</packaging>
 
 	<name>study-monitorandtuning</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
 	<modules>
 		<module>study-monitorandtuning-lesson01</module>
-		<module>study-monitorandtuning-lesson02</module>
 		<module>study-monitorandtuning-lesson02</module>
 	</modules>
 

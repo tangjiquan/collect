@@ -15,9 +15,7 @@
         <module>study-designpattern</module>
         <module>study-springboot</module>
         <module>study-log</module>
-		<module>study-springboots2</module>
 		<module>study-redis</module>
-		<module>study-concurrency</module>
 		<module>study-threadandrunnable</module>
 		<module>study-seckill</module>
 		<module>study-cglib</module>
@@ -33,7 +31,6 @@
 		<module>study-jpo</module>
 		<module>study-pool</module>
 		<module>study-mybatisplus</module>
-		<module>study-motan</module>
 		<module>study-jwt</module>
 		<module>study-bin</module>
 		<module>study-quartz</module>

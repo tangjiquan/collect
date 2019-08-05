@@ -6,10 +6,9 @@
 	<name>${project.artifactId}</name>
 
 	<parent>
-		<groupId>org.t-io</groupId>
-		<artifactId>tio-parent</artifactId>
+		<artifactId>projects-tio-3.2.1</artifactId>
+		<groupId>org.panther</groupId>
 		<version>3.2.1.v20181024-RELEASE</version>
-		<relativePath>../../projects-tio-3.2.1/pom.xml</relativePath>
 	</parent>
 
 	<dependencies>

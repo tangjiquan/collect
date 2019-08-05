@@ -13,8 +13,6 @@
 	<packaging>pom</packaging>
 
 	<name>study-cglib</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
 	<modules>
 		<module>study-cglib-study01</module>
 	</modules>
