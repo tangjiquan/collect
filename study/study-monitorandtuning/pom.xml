@@ -18,6 +18,8 @@
 	<url>http://www.example.com</url>
 	<modules>
 		<module>study-monitorandtuning-lesson01</module>
+		<module>study-monitorandtuning-lesson02</module>
+		<module>study-monitorandtuning-lesson02</module>
 	</modules>
 
 	<properties>

@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>collect</artifactId>
-        <groupId>com.panther</groupId>
+        <groupId>org.panther</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -14,7 +14,6 @@
     <url>http://maven.apache.org</url>
     <modules>
         <module>projects-fourinone</module>
-        <module>projects-rocketmq</module>
         <module>projects-commons-cli</module>
         <module>projects-zbus</module>
 		<module>projects-slf4j</module>
@@ -28,6 +27,8 @@
 		<module>projects-motan</module>
 		<module>projects-mybatis</module>
 		<module>projects-tio</module>
+		<module>project-quartz</module>
+		<module>projects-quartz</module>
 	</modules>
 
     <properties>

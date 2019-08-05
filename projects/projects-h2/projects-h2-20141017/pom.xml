@@ -12,8 +12,6 @@
 	<artifactId>projects-h2-20141017</artifactId>
 
 	<name>projects-h2-20141017</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

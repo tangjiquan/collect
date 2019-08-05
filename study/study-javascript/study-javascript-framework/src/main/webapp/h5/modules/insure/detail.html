@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="../../public/css/sm.css?rev=615cecaed745b1de8d3811d30eb36e09">
+<link rel="stylesheet" href="../../public/css/swiper.css?rev=3a731d5a64a9cf9052fcdf4bd5af621e">
+<link rel="stylesheet" href="../../public/css/sm-extend.css?rev=86932e2e2d0f11d5671c03316a935d54">
+<link rel="stylesheet" href="css/index.css?rev=3a731d5a64a9cf9052fcdf4bd5af621e">
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="../../public/js/lib/require.js?rev=e1484b205fdeccebe61a787fb342cba4"></script>
+</head>
+<body>
+<div class="page-group">
+	<div class="page page-current" id="detail-page">
+	<!-- 你的html代码 -->
+		<div class="content">
+			<!-- 顶部图片 -->
+			<div class="topImg">
+				<img src="img/top.jpg" alt="顶部图片"/>
+			</div>
+			<!--顶部图片  end  -->
+
+			<!--表单  -->
+			<div class="list-block">
+				<!--
+					type   1 日期  date 控件
+					type   2 active标签
+					type   3 select类型
+					type   4 普通input类型
+			  -->
+
+					<script id="informationInfoJuicer" type="text/juicer">
+							{@each informationInfo as it,index}
+								{@if it.type==1}
+									<li class="item-content item-link">
+										<div class="item-inner">
+											<div class="item-title">${it.name}</div>
+											<div class="item-after">
+												<input ${it.disabled} id=${it.id} class="blockInput" type="text" data-toggle='date' />
+											</div>
+										</div>
+									</li>
+								{@/if}
+								{@if it.type==2}
+										<li class="item-content" id=${it.id}>
+											<div class="item-inner">
+												<div class="item-title">${it.name}</div>
+												<div class="item-after">
+													{@each it.list as item}
+														<div data-type=${item.code} class="item-button item-gender-button">${item.name}</div>
+													{@/each}
+												</div>
+											</div>
+										</li>
+								{@/if}
+								{@if it.type==3}
+									<li class="item-content item-link" id=${it.id}>
+										<div class="item-inner">
+											<div class="item-title">${it.name}</div>
+											<div class="item-after" style="max-width:70%">
+												<select ${it.disabled} class="item-select">
+													{@each it.list as item}
+														<option value=${item.code}>${item.text}</option>
+													{@/each}
+												</select>
+											</div>
+										</div>
+									</li>
+								{@/if}
+								{@if it.type==4}
+									<li class="item-content item-link">
+										<div class="item-inner">
+											<div class="item-title">${it.name}</div>
+											<div class="item-after">
+												<input ${it.disabled} id=${it.id} class="blockInput" type="text" value=${it.value} />
+											</div>
+										</div>
+									</li>
+								{@/if}
+							{@/each}
+					</script>
+					<ul id="informationInfo">
+
+					</ul>
+					<script id="btn-numbox" type="text/juicer">
+						<li class="item-content btn-numbox">
+							<div class="item-inner">
+								<div class="item-title">投保份数</div>
+								<div class="item-after">
+									<ul class="count">
+											<li><span id="num-jian" class="num-jian">-</span></li>
+											<li><input type="text" class="input-num" id="input-num" value="0" /></li>
+											<li><span id="num-jia" class="num-jia">+</span></li>
+											<li class="clear"></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</script>
+			</div>
+			<!-- 表单  end -->
+
+			<!-- tab -->
+			<div class="buttons-tab">
+			    <a href="#tab1" class="tab-link active button">产品介绍</a>
+			    <a href="#tab2" class="tab-link button">快速理赔</a>
+			    <a href="#tab3" class="tab-link button">常见问题</a>
+					<a href="#tab4" class="tab-link button borderNone">预约详情</a>
+			</div>
+			<div class="bg_fff">
+			    <div class="tabs">
+			      <div id="tab1" class="tab active ">
+			        <div>
+								<!--保障计划  -->
+								<div id="productGuarantee" class="content-block" style="padding-bottom: 0;">
+									<script id="productGuaranteeJuicer" type="text/juicer">
+										<p class="topTitle">保障计划</p>
+										<hr color="#d7d7d7" size="0.5">
+										<ul class="content-block list-block" style="padding:0">
+											{@each productGuarantee as it,index}
+												<li class="item-content item-link item-toggle" style="padding:0;max-height:26px;min-height:26px">
+													<div class="item-inner" style="max-height:26px;min-height:26px;padding: 0;">
+														<div class="item-title" style="margin-left:0"> ${it.name}</div>
+														<div class="item-after"></div>
+													</div>
+												</li>
+												<li class="item-content item-toggleHide displayNone" style="padding-left:0">
+													<p>$${it.text}</p>
+												</li>
+											{@/each}
+										 </ul>
+										 <hr color="#d7d7d7" size="0.5">
+										 <p class="topTitle">产品特色</p>
+	 									 <hr color="#d7d7d7" size="0.5">
+									</script>
+
+								</div>
+								<!--保障计划  end-->
+
+			          <div id="productIdImg">
+									<script id="productIdImgJuicer" type="text/juicer">
+											{@each productIdImg as it,index}
+												<img src=${"img/"+productIdImg[index]} alt="">
+											{@/each}
+									</script>
+			          </div>
+								<div style="padding-bottom:10px;display:none">注：具体参考产品条款。</div>
+								<!--条款  -->
+								<script id="clauseJuicer" type="text/juicer">
+										{@each clause as it,index}
+											<div style="padding-bottom: 4px;">查看《$${it}》</div>
+										{@/each}
+								</script>
+								<div id="clause" class="clause"></div>
+								<!--条款  -->
+			        </div>
+			      </div>
+			      <div id="tab2" class="tab">
+							<div class="content-block" id="plansList">
+									<div class="list-block">
+											<p class="topTitle">快速理赔</p>
+											<hr color="#d7d7d7" size="0.5">
+											<script id="tpl" type="text/juicer">
+													{@each settlement as it,index}
+														<p><b>${Number(index)+1} ${it.name}</b></p>
+														<p>$${it.text}</p>
+													{@/each}
+											</script>
+											<div id="container"></div>
+									</div>
+
+							 </div>
+			      </div>
+			      <div id="tab3" class="tab">
+							<div class="content-block">
+									<p class="topTitle">常见问题</p>
+									<hr color="#d7d7d7" size="0.5">
+									<script id="cjwtJuicer" type="text/juicer">
+											{@each Doubt as it,index}
+												<p><b>${Number(index)+1} ${it.name}</b>$${it.text}</p>
+											{@/each}
+									</script>
+									<div id="cjwt"></div>
+							</div>
+			      </div>
+						<div id="tab4" class="tab">
+			        <div class="content-block activityList">
+								<script id="yuxqJuicer" type="text/juicer">
+										{@each yyList as it,index}
+											<div>
+												<span class="herderImg"><img src=${it.HEADIMGURL} alt=""/></span>
+												<span>${it.CREATEDATE}</span>
+												<span>${it.MOBILE.substring(0,3) +"****"+ it.MOBILE.substring(7,11)}</span>
+												<span>已预约</span>
+												<h2 class="claer"></h2>
+											</div>
+										{@/each}
+								</script>
+								<div id="yuxq"></div>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+			<!-- tab  end -->
+
+			<!--  -->
+			<div style="height:2.5rem;"></div>
+			<div class="detail-bottom bg_fff">
+          <div class="bar-tab" id="lxbShare" style="display: none">
+              <div class="row no-gutter">
+                  <div class="col-100">
+                      <p class="lxbShare">
+                          <!-- <img src="/h5/public/img/hrp/detail-bottom-icon.png"> -->
+                          <span class="bonusPrompt"></span>
+                      </p>
+                  </div>
+              </div>
+          </div>
+          <div class="bar-tab">
+              <div class="row no-gutter">
+                  <div href="tel:95354" class="col-20" style="background-color:white;border-right: 1px solid #E8E8E8;">
+                      <a style="line-height:1.1;" href="tel:95354">
+                          <img src="http://wx.e-soochowlife.com/img/_20170830112334.png" style="width: 22px;display:inline-block">
+													<span class="kefu1">客服</span>
+                      </a>
+                  </div>
+                  <div class="col-40 productPrice">
+                      总价：<span style="color:#2db7f5" id="orderAmount">1000.00</span>元<span id="premUnit" style="display: none;"></span>
+                  </div>
+                  <div id="buy" class="col-40" style="">立即预约</div>
+              </div>
+          </div>
+      </div>
+			<!--  -->
+
+		 </div>
+		 <script>
+ 			var PageScope = null;
+ 			require(['../../public/js/common.js?vv=20181206213350'], function() {
+ 				require(['../../modules/insure/detail.js'], function(module) {
+ 					PageScope = module;
+ 					console.log(module);
+ 					PageScope.init();
+ 				});
+ 			});
+ 		</script>
+	</div>
+</div>
+</body>
+</html>

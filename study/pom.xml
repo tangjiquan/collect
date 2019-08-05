@@ -32,6 +32,11 @@
 		<module>study-javascript</module>
 		<module>study-jpo</module>
 		<module>study-pool</module>
+		<module>study-mybatisplus</module>
+		<module>study-motan</module>
+		<module>study-jwt</module>
+		<module>study-bin</module>
+		<module>study-quartz</module>
 	</modules>
 
 
